@@ -1,0 +1,241 @@
+/* Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+/* Colors */
+:root {
+  --semiBlack: #464b54;
+  --grey: #c4c4c4;
+  --lightGrey: #f8f8f8;
+  --darkGreen: #57cc99;
+  --lightGreen: #80ed99;
+  --lighterGreen: #96ed80;
+  --bloodRed: #de4033;
+  --salmonRed: #f27166;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* NAVIGATION BAR */
+nav {
+  width: fit-content;
+  height: 100vh;
+  padding: 10px 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--lighterGreen) 0%, var(--darkGreen) 100%);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 100%;
+  list-style: none;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+ul.active {
+  width: 88px;
+}
+
+.menu-top,
+.menu-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-top {
+  padding-inline: 10px;
+}
+
+.menu-bottom {
+  gap: 10px;
+}
+
+.menu-bottom li {
+  padding-inline: 30px;
+  border-radius: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+.menu-bottom li:hover {
+  background-color: transparent;
+}
+
+li {
+  display: flex;
+  padding-inline: 20px;
+  align-items: center;
+  gap: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+li:hover {
+  background-color: rgba(70, 75, 84, 0.1);
+}
+li.active {
+  background-color: white;
+}
+li.active > i,
+li.active > h2 {
+  color: var(--lighterGreen);
+}
+
+li.hamb {
+  justify-content: space-between;
+  gap: 0px;
+  cursor: default;
+}
+li.hamb:hover {
+  background-color: transparent;
+}
+
+li.hamb img {
+  width: 109px;
+  transition: all 0.5s;
+}
+
+li.hamb img.active {
+  width: 0;
+  opacity: 0;
+}
+
+li.hamb i {
+  cursor: pointer;
+}
+
+li i {
+  font-size: 28px;
+  color: white;
+}
+
+li h2 {
+  min-width: 180px;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 30px;
+  height: 180px;
+  gap: 20px;
+  color: white;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.account-info.active {
+  height: 0;
+}
+
+.account-info .row1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.account-info .row1 i {
+  font-size: 70px;
+}
+
+.account-info .row1 h2 {
+  width: 200px;
+  font-weight: 700;
+}
+
+.account-info .row2 {
+  text-align: center;
+}
+
+.account-info .row2 p {
+  width: 300px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 30px;
+  height: 330px;
+  gap: 20px;
+  color: white;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.settings-list.active {
+  height: 0;
+}
+
+.settings-list .setting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.settings-list .setting .col1 i {
+  font-size: 40px;
+}
+
+.settings-list .setting .col2 p.setting-name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.settings-list .setting .col2 p {
+  width: 250px;
+  font-size: 14px;
+}
+
+.settings-list .setting3,
+.settings-list .setting1 {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* MAIN CONTENT */
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+/* MAIN CONTENT - EMPTY ARTICLE */
+#emptyArticle {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#emptyArticle p {
+  width: 400px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+#emptyArticle p i {
+  font-size: 30px;
+  color: var(--lighterGreen);
+  cursor: pointer;
+}
+
+/* MAIN CONTENT - ADD ARTICLE */
